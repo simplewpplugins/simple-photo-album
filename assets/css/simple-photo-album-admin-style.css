@@ -1,0 +1,42 @@
+#gallery-metabox-list li {
+    float: left;
+    text-align: center;
+    margin: 5px 5px 5px 0;
+    cursor: move;
+    border:1px solid #ccc;
+    width:99px;
+    position:relative;
+    background:#eee;
+  }
+  
+  #gallery-metabox-list li img {
+    width:100%;
+    height:auto;
+  }
+  
+  #gallery-metabox-list li.ui-sortable-placeholder {
+      border:1px solid #ccc;
+      visibility: visible !important;
+  }
+  
+  
+  #gallery-metabox-list li .image-preview {
+    max-width:138px;
+  }
+  
+  
+  #gallery-metabox-list li .controls {
+    position:absolute;
+    top:0;
+    right:0;
+    background:#fff;
+    font-size:20px;
+    line-height: 20px;
+  }
+  
+  
+  #gallery-metabox-list li .controls .remove-image {
+    display:inline-block;
+    color:red;
+    text-decoration:none;
+  }

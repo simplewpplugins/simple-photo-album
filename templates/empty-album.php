@@ -1,0 +1,1 @@
+<p><?php _e( 'This album is empty.', 'simple-photo-album' ); ?></p>

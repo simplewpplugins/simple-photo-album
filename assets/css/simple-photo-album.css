@@ -1,0 +1,154 @@
+body.admin-bar.fancybox-active .fancybox-container {
+	z-index:999999 !important;
+}
+
+.simpa-albums-container {
+		display: grid;
+		grid-gap: var(--album_columns_gutter);
+		grid-template-columns: var(--album_columns_desktop);
+}
+
+@media(max-width:768px){
+	.simpa-albums-container {
+		grid-template-columns: var(--album_columns_mobile);
+	}
+}
+
+@media(max-width:1280px) and (min-width: 768px){
+	.simpa-albums-container {
+		grid-template-columns: var(--album_columns_tablet);
+	}
+}
+
+.simpa-gallery-container {
+		display: grid;
+		grid-gap: var(--photo_columns_gutter);
+		grid-template-columns: var(--photo_columns_desktop );
+		width: auto !important;
+}
+
+@media(max-width:768px){
+	.simpa-gallery-container {
+		grid-template-columns: var(--photo_columns_mobile);
+	}
+}
+
+@media(max-width:1280px) and (min-width: 768px){
+	.simpa-gallery-container {
+		grid-template-columns: var(--photo_columns_tablet);
+	}
+}
+
+
+/* end of columns */
+
+
+.simpa-albums-container .simpa-album-block { 
+ width: auto !important;
+ border:1px solid #eee;
+ background: #eee;
+ -webkit-box-shadow: 0 0 2px 0 rgba(0,0,0,0.3);
+  box-shadow: 0 0 2px 0 rgba(0,0,0,0.3);
+  text-align: center;
+  line-height: 1em;
+}
+
+.simpa-albums-container .simpa-album-block  .simpa-album-link {
+	text-decoration:none;
+	display:inline-block;
+	position: relative;
+	color:#fff;
+	font-size: 14px;
+	overflow-y: hidden;
+}
+
+
+.simpa-albums-container .simpa-album-block  .simpa-album-link .simpa-album-detail {
+	position: absolute;;
+	bottom:-400px;
+	left:0;
+	width:100%;
+	height: auto;
+	background:rgba(0,0,0,0.6);
+	padding:10px;
+	transition: all 0.2s linear;
+	line-height: 1.2em;
+}
+
+.simpa-albums-container .simpa-album-block  .simpa-album-link .simpa-album-detail .simpa-album-title {
+	font-weight: 700;
+	font-size: 1.2em;
+}
+
+.simpa-albums-container .simpa-album-block  .simpa-album-link .simpa-album-detail .simpa-album-photo-count {
+	font-size: 0.8em;
+	font-weight: 200;
+}
+
+.simpa-albums-container .simpa-album-block  .simpa-album-link:hover > .simpa-album-detail {
+	bottom: 0;
+}
+
+.simpa-albums-container .simpa-album-block  .simpa-album-link .simpa-album-cover {
+	transition: all 0.2s linear;
+}
+
+.simpa-albums-container .simpa-album-block  .simpa-album-link:hover > .simpa-album-cover {
+	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+
+.simpa-albums-container .simpa-album-block  .simpa-album-link  .simpa-album-cover img{
+	display: block;
+}
+
+
+.simpa-gallery-container a[data-fancybox] {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	margin:0;
+	padding:0;
+	border:none;
+	text-decoration: none;
+}
+
+.simpa-gallery-container .item {
+	background: #eee;
+	-webkit-box-shadow: 0 0 2px 0 rgba(0,0,0,0.3);
+	box-shadow: 0 0 2px 0 rgba(0,0,0,0.3);
+} 
+
+.simpa-gallery-container a[data-fancybox] .simpa-hover-overlay {
+	position: absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background: rgba(0,0,0,0.1);
+	color:#000;
+	font-size: 1.5em;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+    flex-direction: column;
+    transition: all 0.1s linear;
+    visibility: hidden;
+}
+
+.simpa-gallery-container a[data-fancybox] .simpa-hover-overlay > span {
+	width: 30px;
+    height: 30px;
+    background: rgba(255,255,255,0.5);
+    border-radius: 50%;
+    line-height: 30px;
+    padding: 0;
+    text-align: center;
+    margin: auto;
+    font-size: 20px;
+}
+
+
+.simpa-gallery-container a[data-fancybox]:hover > .simpa-hover-overlay {
+	visibility: visible;
+}

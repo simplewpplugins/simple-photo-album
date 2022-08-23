@@ -1,0 +1,1 @@
+<p><?php _e( 'Invalid album.', 'simple-photo-album' ); ?></p>
